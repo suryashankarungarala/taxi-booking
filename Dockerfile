@@ -2,7 +2,7 @@ FROM tomcat:latest
 
 LABEL maintainer="surya shankar"
 
-ADD ./target//taxi-booking-1.0.1.war /usr/local/tomcat/webapps/
+ADD taxi-booking/target//taxi-booking-1.0.1.war /usr/local/tomcat/webapps/
 
 EXPOSE 8080
 
