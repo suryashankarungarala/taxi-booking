@@ -1,5 +1,10 @@
-FROM openjdk:8
-ADD /tmp/workspace/job/taxi-booking/target/taxi-booking-1.0.1.war taxi-booking.war
-ENTRYPOINT ["java", "-war", "taxi-booking.war"]
+FROM tomcat:latest
 
+LABEL maintainer="surya shankar"
+
+ADD ./target//taxi-booking-1.0.1.war /usr/local/tomcat/webapps/
+
+EXPOSE 8080
+
+CMD ["catalina.sh", "run"
 
